@@ -4,8 +4,6 @@ WORKDIR /app
 
 ADD app.py /app/
 
-RUN pip install flask flask_restful
-
-EXPOSE 8084
+EXPOSE 5000
 
 CMD ["python", "app.py"]
