@@ -100,12 +100,12 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{ secrets.DOCKERHUB_USERNAME }}/arithmetic-progression-app:latest
-          ${{ secrets.DOCKERHUB_USERNAME }}/arithmetic-progression-app:${{ github.sha }}
+          ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/app:${{ github.sha }}
 
     - name: Verify push
       run: |
         echo "Образ успішно завантажено на DockerHub!"
         echo "Теги:"
-        echo "  - ${{ secrets.DOCKERHUB_USERNAME }}/arithmetic-progression-app:latest"
-        echo "  - ${{ secrets.DOCKERHUB_USERNAME }}/arithmetic-progression-app:${{ github.sha }}"
+        echo "  - ${{ secrets.DOCKERHUB_USERNAME }}/app:latest"
+        echo "  - ${{ secrets.DOCKERHUB_USERNAME }}/app:${{ github.sha }}"
